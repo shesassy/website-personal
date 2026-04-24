@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Areta | Profil Lengkap</title>
+    <style>
+        /* 1. BACKGROUND MEJA REALISTIK */
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            font-family: 'Georgia', serif; 
+            background-image: url('https://i.pinimg.com/originals/5a/a9/be/5aa9be0121f8fa8517892bea54126717.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 2. HEADER - EFEK KERTAS */
+        header {
+            width: 80%;
+            max-width: 700px;
+            background-color: #fff;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); 
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            box-shadow: 2px 10px 20px rgba(0,0,0,0.3);
+            transform: rotate(-1deg); 
+            margin-bottom: 50px;
+        }
+
+        header h1 { margin: 0; color: #332b21; font-size: 2.2rem; }
+
+        /* 3. NAVIGASI TAB */
+        nav {
+            display: flex;
+            width: 90%;
+            max-width: 900px;
+            gap: 2px;
+            margin-bottom: -1px; 
+            z-index: 2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #443c33;
+            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 14px;
+            border-radius: 8px 25px 0 0;
+            transition: 0.3s;
+        }
+
+        nav a:nth-child(1) { background-color: #d4a373; } 
+        nav a:nth-child(2) { background-color: #ccd5ae; } 
+        nav a:nth-child(3) { background-color: #e9edc9; } 
+        nav a:nth-child(4) { background-color: #faedcd; } 
+
+        /* 4. MAIN WRAPPER */
+        .main-wrapper {
+            width: 90%;
+            max-width: 900px;
+            background-color: #fefae0;
+            background-image: url('https://www.transparenttextures.com/patterns/p6.png'); 
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 0 15px 15px 15px;
+            padding: 50px;
+            box-shadow: 0 30px 20px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+        }
+
+       
+
+        /* Efek Isolasi */
+        .profile-photo::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(2deg);
+            width: 100px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(2px);
+            z-index: 5;
+        }
+
+        /* 6. ISI TEKS (ASLI ARETA) */
+        .content-text h2 {
+            font-family: 'Times New Roman', serif;
+            color: #283618;
+            border-bottom: 2px solid #bc6c25;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        .content-text h2:first-child { margin-top: 0; }
+
+        .content-text p {
+            line-height: 1.8;
+            color: #443c33;
+            text-align: justify;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #fefae0;
+            text-shadow: 1px 1px 2px black;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .content-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Areta Nurul Hasna</h1>
+        <p><i>Karya Nyata dari Proses Belajar</i></p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="video.html">Video</a>
+        <a href="project.html">My Project</a>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="content-grid">
+            
+            <div class="profile-photo">
+                <img src="iyap.jpg" alt="Foto Profil">
+                <p style="font-size: 11px; margin-top: 15px; color: #666;"><i>Areta Nurul Hasna</i></p>
+            </div>
+
+            <div class="content-text">
+                <h2>Profil Singkat</h2>
+                <p>Halo! Namaku Areta Nurul Hasna, aku seorang siswi level 9 SMPIT Al-Haraki, .</p>
+
+                <h2>Tentang Saya</h2>
+                <p>Saya adalah orang yang cenderung pemalu, tapi bisa menjadi lebih terbuka dan ramai ketika sudah merasa nyaman. Saya juga terus berusaha untuk belajar dan memahami pelajaran dengan baik dan terus mengembangkan diri</p>
+
+                <h2>Minat dan Bakat</h2>
+                <p>Minat saya ada di bidang kesehatan dan dance. Untuk bakat saya memiliki kemamuan di tari dan desain (meskipun bukan menggambar), dan saya terus mencoba mengembangkan kemampuan tersebut.</p>
+
+                <h2>Cita-cita dan Harapan</h2>
+                <p><i>Cita-cita saya adalah memiliki masa depan yang baik, terutama di bidang yang saya minati seperti kesehatan. Harapan saya, semoga saya bisa terus belajar, berkembang, dan mencapai apa yang saya inginkan serta membanggakan orang tua</i></p>
+
+                <h2>Kesan dan Pesan Selama Kelas IX</h2>
+                <p>Kesan: Selama di kelas 9, saya mendapatkan banyak pengalaman dan pelajaran baru yang sangat berharga. Saya juga belajar untuk lebih memahami banyaj hal, baik dalam pelajaran maupun dalam kehidupan sehari-hari
+                    Pesan: Semoga ke depannya kita semua bisa sukses dengan jalannya masing-masing dan tidak melupakan kenangan selama di kelas 9. Terima kasih juga untuk guru-guru atas bimbingannya selama ini.
+                    
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Ujian Praktik Terintegrasi | SMPIT Al Haraki | Areta Nurul Hasna@2026</p>
+    </footer>
+
+</body>
+</html>

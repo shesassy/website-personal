@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Areta | My Project</title>
+    <style>
+        /* 1. BACKGROUND MEJA REALISTIK */
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            font-family: 'Georgia', serif; 
+            background-image: url('https://i.pinimg.com/originals/5a/a9/be/5aa9be0121f8fa8517892bea54126717.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 2. HEADER */
+        header {
+            width: 80%;
+            max-width: 700px;
+            background-color: #fff;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); 
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            box-shadow: 2px 10px 20px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.1) inset;
+            transform: rotate(-1deg); 
+            margin-bottom: 50px;
+        }
+
+        header h1 { margin: 0; color: #332b21; font-size: 2.2rem; }
+
+        /* 3. NAVIGASI TAB FOLDER */
+        nav {
+            display: flex;
+            width: 90%;
+            max-width: 900px;
+            gap: 2px;
+            margin-bottom: -1px; 
+            z-index: 2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #443c33;
+            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 14px;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-bottom: none;
+            border-radius: 8px 25px 0 0;
+            background-image: linear-gradient(to top, rgba(0,0,0,0.05), transparent);
+            transition: 0.3s;
+        }
+
+        nav a:nth-child(1) { background-color: #d4a373; } 
+        nav a:nth-child(2) { background-color: #ccd5ae; } 
+        nav a:nth-child(3) { background-color: #e9edc9; } 
+        nav a:nth-child(4) { background-color: #faedcd; } 
+
+        /* 4. MAIN WRAPPER (KERTAS) */
+        .main-wrapper {
+            width: 90%;
+            max-width: 900px;
+            background-color: #fefae0;
+            background-image: url('https://www.transparenttextures.com/patterns/p6.png'); 
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 0 15px 15px 15px;
+            padding: 50px;
+            box-shadow: 0 10px 0 -5px #eee, 0 30px 20px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+        }
+
+        .main-wrapper h2 {
+            text-align: center;
+            color: #283618;
+            border-bottom: 2px solid #bc6c25;
+            padding-bottom: 10px;
+        }
+
+        /* 5. GRID 4 FOTO BERDERET */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        /* Card yang juga berfungsi sebagai Link */
+        .project-card {
+            background-color: #fff;
+            padding: 10px 10px 30px 10px; /* Frame Polaroid */
+            border: 1px solid #ddd;
+            box-shadow: 5px 8px 15px rgba(0,0,0,0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none; /* Ilangin garis bawah link */
+            display: block;
+        }
+
+        /* Variasi Miring */
+        .project-card:nth-child(1) { transform: rotate(-3deg); }
+        .project-card:nth-child(2) { transform: rotate(2deg); }
+        .project-card:nth-child(3) { transform: rotate(-1.5deg); }
+        .project-card:nth-child(4) { transform: rotate(3deg); }
+
+        .project-card:hover {
+            transform: rotate(0deg) translateY(-15px);
+            z-index: 100;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .project-card img {
+            width: 100%;
+            aspect-ratio: 1/1; 
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        .project-card span {
+            display: block;
+            margin-top: 15px;
+            font-family: 'Georgia', serif;
+            font-size: 12px;
+            color: #582f0e;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer { text-align: center; margin-top: 60px; color: #fff; }
+
+        @media (max-width: 800px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Areta Nurul Hasna</h1>
+        <p><i>Karya Nyata dari Proses Belajar</i></p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="video.html">Video</a>
+        <a href="project.html">My Project</a>
+    </nav>
+
+    <div class="main-wrapper">
+        <h2>My Projects</h2>
+        <p style="text-align: center;"><i>Halaman ini menampilkan karya-karya saya. <br> <b>Klik pada foto</b> untuk langsung melihat hasilnya.</i></p>
+
+        <div class="project-grid">
+            
+            <a href="video.html" class="project-card">
+                <img src="https://i.pinimg.com/736x/8d/c3/9c/8dc39c595e0461c246b86aef2d4f9edc.jpg" alt="yap1.jpg">
+                <span>Video Argumentasi</span>
+            </a>
+
+            <a href="index.html" class="project-card">
+                <img src="https://i.pinimg.com/736x/8d/c3/9c/8dc39c595e0461c246b86aef2d4f9edc.jpg" alt="yap1.jpg">
+                <span>Website Portofolio</span>
+            </a>
+
+            <a href="https://scratch.mit.edu/projects/1085528187" target="_blank" class="project-card">
+                <img src="https://i.pinimg.com/736x/8d/c3/9c/8dc39c595e0461c246b86aef2d4f9edc.jpg" alt="yap1.jpg">
+                <span>Game Edukasi (Scratch)</span>
+            </a>
+            <a href="https://scratch.mit.edu/projects/1132788669" class="project-card">
+                <img src="https://i.pinimg.com/736x/8d/c3/9c/8dc39c595e0461c246b86aef2d4f9edc.jpg" alt="yap1.jpg">
+                <span>Proyek Lainnya</span>
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Areta Nurul Hasna | SMPIT Al Haraki</p>
+    </footer>
+
+</body>
+</html>
