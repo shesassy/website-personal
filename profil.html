@@ -31,9 +31,13 @@
             box-shadow: 2px 10px 20px rgba(0,0,0,0.3);
             transform: rotate(-1deg); 
             margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        header h1 { margin: 0; color: #332b21; font-size: 2.2rem; }
+        header h1 { margin: 0; color: #332b21; font-size: 2.2rem; text-align: center; }
+        header p { text-align: center; }
 
         /* 3. NAVIGASI TAB */
         nav {
@@ -79,10 +83,22 @@
             gap: 40px;
         }
 
-       
+        /* 5. STYLE FOTO */
+        .photo-box {
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .photo-box img {
+            border: none; 
+            box-shadow: none; /* Bayangan foto dihapus */
+            max-width: 100%;
+            border-radius: 2px;
+        }
 
         /* Efek Isolasi */
-        .profile-photo::before {
+        .photo-box::before {
             content: '';
             position: absolute;
             top: -10px;
@@ -95,21 +111,23 @@
             z-index: 5;
         }
 
-        /* 6. ISI TEKS (ASLI ARETA) */
-        .content-text h2 {
+        /* 6. ISI TEKS */
+        h2 {
             font-family: 'Times New Roman', serif;
             color: #283618;
             border-bottom: 2px solid #bc6c25;
             padding-bottom: 5px;
-            margin-top: 25px;
+            margin-top: 30px;
+            font-size: 1.3rem;
         }
 
-        .content-text h2:first-child { margin-top: 0; }
+        h2:first-child { margin-top: 0; }
 
-        .content-text p {
-            line-height: 1.8;
+        p {
+            line-height: 1.6;
             color: #443c33;
             text-align: justify;
+            margin-bottom: 15px;
         }
 
         footer {
@@ -123,13 +141,73 @@
         @media (max-width: 800px) {
             .content-grid { grid-template-columns: 1fr; }
         }
+/* CONTAINER VINYL */
+.vinyl-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.vinyl-wrapper {
+    width: 150px;
+    height: 150px;
+    background: #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 5px solid #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease;
+}
+
+/* Lubang Tengah Vinyl */
+.vinyl-center {
+    width: 50px;
+    height: 50px;
+    background-color: #bc6c25; /* Warna senada tema */
+    border-radius: 50%;
+    z-index: 2;
+    border: 2px solid #000;
+}
+
+/* Tekstur Garis Piringan Hitam */
+.vinyl-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: repeating-radial-gradient(circle, black, black 2px, #1a1a1a 4px);
+    opacity: 0.3;
+}
+
+/* Animasi Berputar */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spinning {
+    animation: spin 3s linear infinite;
+}
+
+.vinyl-text {
+    font-size: 12px;
+    color: #443c33;
+    margin-top: 10px;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>
 
     <header>
         <h1>Areta Nurul Hasna</h1>
-        <p><i>Karya Nyata dari Proses Belajar</i></p>
+        <p><i>Ujian Praktik Terintegrasi 2026</i></p>
     </header>
 
     <nav>
@@ -142,36 +220,52 @@
     <div class="main-wrapper">
         <div class="content-grid">
             
-            <div class="profile-photo">
-                <img src="iyap.jpg" alt="Foto Profil">
-                <p style="font-size: 11px; margin-top: 15px; color: #666;"><i>Areta Nurul Hasna</i></p>
-            </div>
-
-            <div class="content-text">
-                <h2>Profil Singkat</h2>
-                <p>Halo! Namaku Areta Nurul Hasna, aku seorang siswi level 9 SMPIT Al-Haraki, .</p>
-
-                <h2>Tentang Saya</h2>
-                <p>Saya adalah orang yang cenderung pemalu, tapi bisa menjadi lebih terbuka dan ramai ketika sudah merasa nyaman. Saya juga terus berusaha untuk belajar dan memahami pelajaran dengan baik dan terus mengembangkan diri</p>
-
-                <h2>Minat dan Bakat</h2>
-                <p>Minat saya ada di bidang kesehatan dan dance. Untuk bakat saya memiliki kemamuan di tari dan desain (meskipun bukan menggambar), dan saya terus mencoba mengembangkan kemampuan tersebut.</p>
+            <div class="column-left">
+                <div class="photo-box">
+                    <img src="iyap.jpg" alt="Foto Profil Utama" style="width: 300px; height: auto;">
+                    <p style="font-size: 11px; margin-top: 10px; color: #666; text-align: center;"><i>Areta Nurul Hasna</i></p>
+                </div>
 
                 <h2>Cita-cita dan Harapan</h2>
-                <p><i>Cita-cita saya adalah memiliki masa depan yang baik, terutama di bidang yang saya minati seperti kesehatan. Harapan saya, semoga saya bisa terus belajar, berkembang, dan mencapai apa yang saya inginkan serta membanggakan orang tua</i></p>
+                <p><i>Cita-cita saya adalah memiliki masa depan yang baik, terutama di bidang yang saya minati seperti kesehatan. Harapan saya, semoga saya bisa terus belajar, berkembang, dan mencapai apa yang saya inginkan serta membanggakan orang tua.</i></p>
 
-                <h2>Kesan dan Pesan Selama Kelas IX</h2>
-                <p>Kesan: Selama di kelas 9, saya mendapatkan banyak pengalaman dan pelajaran baru yang sangat berharga. Saya juga belajar untuk lebih memahami banyaj hal, baik dalam pelajaran maupun dalam kehidupan sehari-hari
-                    Pesan: Semoga ke depannya kita semua bisa sukses dengan jalannya masing-masing dan tidak melupakan kenangan selama di kelas 9. Terima kasih juga untuk guru-guru atas bimbingannya selama ini.
-                    
-                </p>
+                <h2>Kesan dan Pesan Kelas IX</h2>
+                <p><b>Kesan:</b> Banyak pengalaman baru yang berharga. Saya belajar untuk lebih memahami banyak hal, baik dalam pelajaran maupun kehidupan.</p>
+                <p><b>Pesan:</b> Semoga kita semua sukses dengan jalan masing-masing dan tidak melupakan kenangan kelas 9. Terima kasih guru-guru!</p>
             </div>
 
+            <div class="column-right">
+                <h2>Profil Singkat</h2>
+                <p>Halo! Namaku Areta Nurul Hasna, saya seorang siswi level 9 SMPIT Al-Haraki .</p>
+
+                <h2>Tentang Saya</h2>
+                <p>Saya adalah orang dengan kepribadian yang cenderung pemalu, tapi bisa menjadi sangat terbuka ketika sudah merasa nyaman. Saya terus berusaha untuk terus belajar dan memahami pelajaran dengan baik.</p>
+
+                <h2>Minat dan Bakat</h2>
+                <p>Minat saya di bidang kesehatan dan menari. Saya memiliki kemampuan di tari dan desain(walaupun bukan menggambar), dan terus mencoba mengembangkan kemampuan tersebut.</p>
+                <div style="position: relative; width: fit-content; margin-top: 50px; margin-left: auto; margin-right: 80px;">
+    
+    <div class="photo-box" style="position: relative; z-index: 1; margin: 0;">
+        <img src="4sh.jpg" alt="Foto Struk" style="width: 280px; height: auto; transform: rotate(-2deg); display: block;">
+        
+        <div style="position: absolute; bottom: -20px; right: -90px; z-index: 2;">
+            <img src="lon.jpg" alt="Foto Kecil" style="width: 230px; height: auto; transform: rotate(5deg);">
         </div>
     </div>
+</div>
+
+<div style="margin-top: 60px;"></div>
+
+</div>
+                
+            </div>
+<div>
+    </div>
+    
+</div>
 
     <footer>
-        <p>Ujian Praktik Terintegrasi | SMPIT Al Haraki | Areta Nurul Hasna@2026</p>
+        <p>Ujian Praktik Terintegrasi | SMPIT Al Haraki | Areta Nurul Hasna @2026</p>
     </footer>
 
 </body>
